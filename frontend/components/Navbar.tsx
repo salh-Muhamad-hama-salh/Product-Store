@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "@/public/Logo.png";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import { Plus } from "lucide-react";
 
 function Navbar() {
   return (
@@ -51,27 +52,14 @@ function Navbar() {
                   My Store
                 </Link>
               </li>
-              {/* <li className="relative" data-slot="navigation-menu-item">
-                <a
-                  className="relative bg-transparent px-1.5 font-medium text-muted-foreground text-sm"
-                  href="/setup"
-                >
-                  My Store
-                </a>
-              </li> */}
-              {/* <li className="relative" data-slot="navigation-menu-item">
-                <a
-                  className="relative bg-transparent px-1.5 font-medium text-muted-foreground text-sm"
-                  href="/my-sponsors"
-                >
-                  About My Products
-                </a>
-              </li> */}
             </ul>
           </div>
           <div className="absolute top-full left-0 isolate z-50 flex justify-center"></div>
         </nav>
         <div className="flex items-center gap-2.5 z-10">
+          <Link className="rounded-full" href="/my-store/add-product">
+            <Plus />
+          </Link>
           <ModeToggle />
         </div>
       </div>

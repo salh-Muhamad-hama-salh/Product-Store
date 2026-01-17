@@ -7,11 +7,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com", // 👈 change if needed
+        hostname: "**", // ✅ allow ALL HTTPS image domains
       },
       {
         protocol: "http",
-        hostname: "localhost", // 👈 for local backend images
+        hostname: "**", // ✅ allow ALL HTTP image domains
       },
     ],
   },

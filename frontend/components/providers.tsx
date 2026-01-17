@@ -4,6 +4,7 @@ import { HeroUIProvider } from "@heroui/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           disableTransitionOnChange
         >
           {children}
+          <Toaster position="bottom-center" />
         </ThemeProvider>
       </HeroUIProvider>
     </QueryClientProvider>

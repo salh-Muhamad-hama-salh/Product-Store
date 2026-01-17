@@ -7,11 +7,11 @@ const productStoreSchema = new mongoose.Schema(
       required: true,
     },
     price: {
-      type: Number,
+      type: String,
       required: true,
     },
     imageURL: {
-      type: String,
+      type: Array,
       required: true,
     },
   },
